@@ -14,7 +14,19 @@ const storage = multer.diskStorage({
   }
 });
 
-const upload = multer({ storage: storage }).single('image'); // Gérer un fichier image
+const upload = multer({
+  storage: storage,
+  fileFilter: (req, file, cb) => {
+      const filetypes = /jpeg|jpg|png|gif/; // Allowed file types
+      const mimetype = filetypes.test(file.mimetype);//checking file type
+      const extname = filetypes.test(path.extname(file.originalname).toLowerCase());//checking the extension
+      if (mimetype && extname) {
+          return cb(null, true);
+      }
+      cb("Error: File upload only supports the following filetypes - " + filetypes);//if the req dosnt meet then reject the file
+  }
+}).single('image');
+// Gérer un fichier image
 
 foodRouter.post("/add", (req, res, next) => {
   upload(req, res, function (err) {
