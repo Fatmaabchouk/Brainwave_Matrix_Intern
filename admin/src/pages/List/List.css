@@ -1,0 +1,35 @@
+.list-table-format{
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 0.5fr;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 15px;
+    border: 1px solid #cacaca;
+    font-size: 13px;
+
+
+}
+/* List.css */
+.list-table-format img {
+    width: 50px; /* Vous pouvez ajuster cette valeur */
+    height: auto; /* Cela gardera le ratio d'aspect */
+    max-width: 100%; /* Assure que l'image ne dépasse pas la largeur de son conteneur */
+    max-height: 100px; /* Ajustez la hauteur maximum selon vos besoins */
+    object-fit: cover; /* Cela coupera l'image si elle dépasse le ratio d'aspect */
+}
+.list-table-format.title{
+    background-color: #f9f9f9 ;
+
+}
+@media (max-width:600px) {
+    .list-table-format{
+        grid-template-columns: 1fr 3fr 1fr;
+        gap:15px;
+    }
+    .list-table-format.title{
+        display: none;
+
+    }
+
+    
+}
