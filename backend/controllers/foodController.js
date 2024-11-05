@@ -21,7 +21,7 @@ const addFood = async (req, res) => {
 
     try {
         await food.save();
-        res.json({ success: true, message: "Food Added" });
+        res.json({ success: true, message: "Product Added" });
     } catch (error) {
         console.log(error);
         res.json({ success: false, message: 'Error' });
@@ -45,7 +45,7 @@ const removeFood = async (req, res) => {
         const food = await foodModel.findById(req.body.id);
         
         if (!food) {
-            return res.status(404).json({ success: false, message: "Food not found" });
+            return res.status(404).json({ success: false, message: "Product not found" });
         }
 
         // Suppression du fichier image
@@ -59,7 +59,7 @@ const removeFood = async (req, res) => {
 
         // Suppression de l'élément de la base de données
         await foodModel.findByIdAndDelete(req.body.id);
-        res.json({ success: true, message: "Food Removed" });
+        res.json({ success: true, message: "Product Removed" });
         
     } catch (error) {
         console.log(error);

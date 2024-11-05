@@ -1,10 +1,14 @@
-.header{
-    height: 34vw;
-    margin: 30px auto;
-    background: url('/header_img.png') no-repeat;
-    background-size: contain;
+.header {
+    height: 41vw;
+    margin: 31px auto;
+    background: url('/header_img-1.png') no-repeat center center;
+    background-size: cover; /* Cette option rendra l'image pleine largeur */
     position: relative;
+    width: 100vw; /* Ajustez selon la largeur souhaitée */
+    max-width: 100%;
+    overflow: hidden; /* Cache les débordements si nécessaire */
 }
+
 .header-contents{
     position: absolute;
     display: flex;

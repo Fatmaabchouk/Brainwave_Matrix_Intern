@@ -4,14 +4,15 @@
     justify-content: space-between;
     align-items: center;
 }
-.navbar.logo{
-    width: 150px;
+.navbar .logo {
+    width: 150px; /* Taille de base du logo */
+    max-width: 100%; /* Empêche le dépassement de la largeur */
 }
 .navbar-menu{
     display: flex;
     list-style: none;
     gap: 20px;
-    color:orange ;
+    color:rgb(251, 1, 164) ;
     font-size: 18px;
 }
 .navbar-right{
@@ -23,14 +24,14 @@
     background-color: transparent;
     font-size: 16px;
     color: #49557e;
-    border: 1px solid tomato;
+    border: 1px solid rgb(255, 71, 203);
     padding: 10px 30px;
     border-radius:50px;
     cursor: pointer;
     transition: 0.3s;
 }
 .navbar button:hover{
-    background-color: rgb(235, 141, 59);
+    background-color: rgb(235, 59, 165);
 }
 .navbar .active{
     padding-bottom: 2px;
@@ -47,16 +48,17 @@
     position: absolute;
     min-width: 10px;
     min-height: 10px;
-    background-color: tomato;
+    background-color: rgb(255, 71, 203);
     border-radius: 5px;
     top:-8px;
     right:-8px;
 }
-@media (max-width:1050px ){
+@media (max-width: 900px) {
     .navbar .logo { 
-    width : 140px;}
+        width: 120px; /* Réduit la taille du logo pour les écrans plus petits */
+    }
     .navbar-menu{
-        gap: 20px;
+        gap: 15px;
         font-size: 17px;
 
     }
@@ -71,9 +73,10 @@
     padding: 8px 25px;
 }
 }
-@media (max-width:900px ){
-    .navbar .logo { 
-    width : 140px;}
+@media (max-width: 750px) {
+    .navbar .logo {
+        width: 100px; /* Taille du logo encore plus petite pour les mobiles */
+    }
     .navbar-menu{
         gap: 15px;
         font-size: 16px;
@@ -108,7 +111,7 @@
     background-color: #fff2ef;
     padding: 12px 25px;
     border-radius: 4px;
-    border: 1px solid tomato;
+    border: 1px solid rgb(255, 71, 187);
     outline: 2px solid white;
     list-style: none ;
 
@@ -124,7 +127,7 @@
 
 }
 .nav-profile-dropdownli:hover{
-    color: tomato;
+    color: rgb(255, 71, 187);
 
 
 

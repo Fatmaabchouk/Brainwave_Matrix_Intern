@@ -5,12 +5,12 @@ const Header = () => {
     <div className='header'>
       <div className="header-contents">
         <h2>
-            order your favourite food here
+        Discover Your Favorite Beauty Products Here
         </h2>
         <p>
-            Choose from a diverse menu featuring a delectable array </p>
+        Explore our curated collection of premium skincare, makeup, and personal care products, tailored to enhance every beauty routine</p>
 
-        <button>view Menu</button>
+        <button>view Products</button>
       </div>
     </div>
   )

@@ -38,3 +38,5 @@ app.listen(port,()=>{
 
 } )
 //mongodb+srv://abchoukfatma18:@Introuvable1@cluster0.lju0wb2.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+//skinou: +/MEHxFmgW8ORdNR88 :mdp
+  //abchoukfatma18 :user
